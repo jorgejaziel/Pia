@@ -1,0 +1,27 @@
+<ion-header>
+    <img  src="assets/icon/loguito.png">
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true">
+    <ion-slide>
+      <ion-text>
+        <img src="assets/icon/slide1.png">
+        <ion-button (click)="next()"  expand="block">Comienza Ahora</ion-button>
+      </ion-text>
+    </ion-slide>
+    <ion-slide>
+      <ion-text>
+        <img src="assets/icon/slide2.png">
+        <ion-button (click)="next()" expand="block">Comienza Ahora</ion-button>
+      </ion-text>
+    </ion-slide>
+  
+    <ion-slide>
+      <ion-text>
+        <img src="assets/icon/slide3.png">
+        <ion-button routerLink="/login"  expand="block">Comienza Ahora</ion-button>
+      </ion-text>
+    </ion-slide>
+  </ion-slides>
+  </ion-content>

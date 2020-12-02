@@ -1,0 +1,18 @@
+ion-slides{
+    height: 100%;
+    --bullet-background-active:#9B7634;
+    --bullet-background: #F5F5F5;
+  }
+  ion-button {
+    --background: #9B7634;
+    margin-top: 35px;
+    height: 48px;
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+}
+ion-header{
+  margin-top: 35px;
+  margin-left: 55px;
+  text-align: center;
+}

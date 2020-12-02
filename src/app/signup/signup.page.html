@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/login" color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login">Login</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <img src="assets/icon/barber.jpeg" >
+  </div>
+    <h1>Create your Account</h1>
+    <form (ngSubmit)="login()" [formGroup]="credentials">
+      <ion-item>
+        <ion-input  type="name" placeholder="Name"></ion-input>
+        </ion-item>
+      <ion-item>
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      </ion-item>
+    
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Email is required</span>
+        <span *ngIf="email.errors?.email">Email is invalid</span>
+      </div>
+      <br>
+      <ion-item>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+    
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Password is required</span>
+        <span *ngIf="password.errors?.minlength">Password need to be 8 characters</span>
+      </div>
+    </form>
+    <ion-button type="submit" expand="block" shape="round" [disabled]="!credentials.valid" routerLink="/login">Sign Up</ion-button>
+  <p>By pressing 'Join Us' you agree to <br />our terms & conditions.</p>
+</ion-content>

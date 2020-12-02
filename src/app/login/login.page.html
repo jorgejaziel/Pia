@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/intro"color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/signup">Sign up</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content><div id="header">
+  <img src="assets/icon/barber.jpeg" >
+</div>
+<form (ngSubmit)="login()" [formGroup]="credentials">
+  <ion-item>
+  <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+  </ion-item>
+
+  <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+    <span *ngIf="email.errors?.required">Email is required</span>
+    <span *ngIf="email.errors?.email">Email is invalid</span>
+  </div>
+  <br>
+  <ion-item>
+  <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+  </ion-item>
+
+  <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+    <span *ngIf="password.errors?.required">Password is required</span>
+    <span *ngIf="password.errors?.minlength">Password need to be 8 characters</span>
+  </div>
+
+  <ion-button type="submit" expand="block" shape="round" [disabled]="!credentials.valid">Login</ion-button>
+  
+  <ion-button type="button" expand="block" shape="round">
+    <ion-icon name="logo-google"></ion-icon>
+    Sign in with Google
+  </ion-button>
+  <ion-button type="button" expand="block" shape="round">
+    <ion-icon name="logo-apple"></ion-icon>
+    Sign in with Apple
+  </ion-button>
+
+</form>
+</ion-content>
