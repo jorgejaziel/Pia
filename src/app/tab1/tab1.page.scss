@@ -5,3 +5,33 @@
 app-weather{
     color: #9B7634;
 }
+
+ion-card{
+    background-color: #BEAD8F;
+    margin-left: 20px;
+
+    ion-card-subtitle{
+        color: white;
+        font-size: large;
+    }
+
+    ion-card-content{
+        color: whitesmoke;
+    }
+}
+
+.boton_personalizado{
+        text-decoration: none;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 15px;
+        color: #ffffff;
+        background-color: black;
+        border-radius: 6px;
+        
+}
+
+.boton_personalizado:hover{
+    color: #9B7634;
+    background-color: #ffffff;
+}

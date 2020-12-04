@@ -3,36 +3,45 @@
       <ion-buttons slot="start">
           <ion-menu-button menu="main-menu"></ion-menu-button>
       </ion-buttons>
-      <ion-title class="cards">CUTS</ion-title>
+      <ion-title class="cards">AGENDA TU CORTE</ion-title>
       <app-weather slot="end"></app-weather>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-card routerLink="/agenda">
-      <img src="../../assets/icon/fade.jpg">
-      <ion-card-header>
-        <ion-card-subtitle class="cards">Corte Tipo Fade</ion-card-subtitle>
-        <ion-card-title class="cards">Costo $150</ion-card-title>
-      </ion-card-header>
-      <ion-card-content class="cards">Este corte aproximadamente tarda 50 minutos y es la especialidad de la casa</ion-card-content>
-    </ion-card>
-    
-    <ion-card routerLink="/agenda">
-      <img src="../../assets/icon/crop.png">
-      <ion-card-header>
-        <ion-card-subtitle class="cards">Corte Tipo French Crop</ion-card-subtitle>
-        <ion-card-title class="cards">Costo $150</ion-card-title>
-      </ion-card-header>
-      <ion-card-content class="cards">Este corte aproximadamente tarda 50 minutos y es especial para gente que tiene el pelo quebrado</ion-card-content>
-    </ion-card>
-    
-    <ion-card routerLink="/agenda">
-      <img src="../../assets/icon/militar.jpg">
-      <ion-card-header>
-        <ion-card-subtitle class="cards">Corte Tipo Militar</ion-card-subtitle>
-        <ion-card-title class="cards">Costo $100</ion-card-title>
-      </ion-card-header>
-      <ion-card-content class="cards">Este corte aproximadamente tarda 20 minutos, es un corte elegante y sencillo para cierto tipo de persona que no quiere gastar tanto tiempo en el cuidado del cabello</ion-card-content>
-    </ion-card>
+  <ion-card>
+    <img src="../../assets/icon/cut1.jpg">
+    <ion-card-header>
+      <ion-card-subtitle class="container-subcard">Messy Pomp</ion-card-subtitle>
+      <ion-card-title class="container-subcard">$150 MXN</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="container-subcard">Tipo de desvanecido que direcciona el peinado hacia atrás.
+      <br><br>
+      <button routerLink="/agenda" class="boton_personalizado">Horarios</button>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card routerLink="/agenda">
+    <img src="../../assets/icon/cut2.png">
+    <ion-card-header>
+      <ion-card-subtitle class="container-subcard">Man Bun</ion-card-subtitle>
+      <ion-card-title class="container-subcard">$250 MXN</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="container-subcard">Perfecto para cabello largo, el chongo masculino te da un amplio espacio para experimentar.
+      <br><br>
+      <button routerLink="/agenda" class="boton_personalizado">Horarios</button>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card routerLink="/agenda">
+    <img src="../../assets/icon/cut3.jpg">
+    <ion-card-header>
+      <ion-card-subtitle class="container-subcard">Burst Taper</ion-card-subtitle>
+      <ion-card-title class="container-subcard">$200 MXN</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="container-subcard">Desvanecimiento conico de rafaga que a menudo se combina con un peinado mohaw.
+      <br><br>
+      <button routerLink="/agenda" class="boton_personalizado">Horarios</button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
