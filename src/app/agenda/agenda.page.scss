@@ -7,3 +7,10 @@ ion-toolbar{
         
     }
 }
+@media (min-width: 768px){
+    .fix{
+    max-width: 120rem;
+    width: 30%;
+    margin: 10px auto;
+}
+}

@@ -16,7 +16,7 @@
     <ion-progress-bar *ngIf="isProcessing" type="indeterminate"></ion-progress-bar>
 
     <div *ngIf ="myApiResponseData.count > 0">
-    <ion-card *ngFor="let p of myApiResponseData.results">
+    <ion-card class="fix" *ngFor="let p of myApiResponseData.results">
       <img src="../../assets/icon/{{p.name}}.jpg">
       <ion-item>
         <ion-icon name="person" slot="start"></ion-icon>
