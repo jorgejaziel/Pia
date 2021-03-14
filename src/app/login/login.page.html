@@ -11,14 +11,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content><div id="header">
+<ion-content>
+  <div id="header">
   <img src="assets/icon/barber.jpeg" >
-</div>
-<form (ngSubmit)="login()" [formGroup]="credentials">
-  <ion-item>
-  <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
-  </ion-item>
-
+  </div>
+  <form class="fix" (ngSubmit)="login()" [formGroup]="credentials">
+    <ion-item>
+    <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>
   <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
     <span *ngIf="email.errors?.required">Email is required</span>
     <span *ngIf="email.errors?.email">Email is invalid</span>
